@@ -1,9 +1,11 @@
 # @subdirs@ are the configured subproject directories
-SUBDIRS = m4m @subdirs@
+SUBDIRS = gphoto-m4 @subdirs@
 
-EXTRA_DIST = COPYING.LIB README.gphoto-suite
+EXTRA_DIST = COPYING.LIB
 
-ACLOCAL_AMFLAGS = -I m4m
+EXTRA_DIST += README.md
+
+ACLOCAL_AMFLAGS = -I auto-m4 -I gphoto-m4
 
 include $(top_srcdir)/tools/Makefile-files
 
