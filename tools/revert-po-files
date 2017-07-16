@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# Reverting all *.po files to whatever is in the git repo's current
+# HEAD.
+#
+# This is quite useful as "make distcheck" updates the *.po files, but
+# may be used for checking other things than *.po files.
+
+git checkout HEAD -- $(git ls-files '*.po')
