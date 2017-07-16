@@ -1,0 +1,12 @@
+[submodule "libgphoto2"]
+	path = src/libgphoto2
+	url = ../libgphoto2.git
+	branch = master
+[submodule "gphoto2"]
+	path = src/gphoto2
+	url = ../gphoto2.git
+	branch = master
+[submodule "gphoto-m4"]
+	path = gphoto-m4
+	url = ../gphoto-m4.git
+	branch = master
