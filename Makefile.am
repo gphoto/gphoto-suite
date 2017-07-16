@@ -7,6 +7,15 @@ EXTRA_DIST += README.md
 
 ACLOCAL_AMFLAGS = -I auto-m4 -I gphoto-m4
 
+# The gphoto2 testsuite (in src/gphoto2/tests/testsuite) requires
+# CAMLIBS and IOLIBS to be set properly. Otherwise, the "make check"
+# part of "make distcheck" of gphoto-suite will fail in src/gphoto2
+# when that testsuite runs test based on the 'directory' camlib.
+CAMLIBS = $(PWD)/src/libgphoto2/camlibs
+IOLIBS = $(PWD)/src/libgphoto2/libgphoto2_port
+export CAMLIBS
+export IOLIBS
+
 include $(top_srcdir)/tools/Makefile-files
 
 #######################################################################
