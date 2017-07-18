@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Run 'git status' in the local repo and recurse into all submodules.
+
+git status
+git submodule foreach --recursive 'git status'
