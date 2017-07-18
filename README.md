@@ -145,3 +145,14 @@ Run
     make distcheck
 
 and see whether it finishes without errors.
+
+
+Reduced driver build
+--------------------
+
+For a quick `make distcheck`, it can be advantageous to not build all
+camlibs and iolibs:
+
+    make BUILD_THESE_CAMLIBS="directory.la" IOLIB_LTLIST="disk.la" distcheck
+
+Adding a `-j3` or similar might also speed up things.
