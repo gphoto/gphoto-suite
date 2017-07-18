@@ -17,6 +17,9 @@ ACLOCAL_AMFLAGS = -I auto-m4 -I gphoto-m4
 # CAMLIBS and IOLIBS to be set properly. Otherwise, the "make check"
 # part of "make distcheck" of gphoto-suite will fail in src/gphoto2
 # when that testsuite runs test based on the 'directory' camlib.
+#
+# The libgphoto2{,_port}-uninstalled.pc files with their `driverdir`
+# variables are built too late to be of any help to us.
 CAMLIBS = $(PWD)/src/libgphoto2/camlibs
 IOLIBS = $(PWD)/src/libgphoto2/libgphoto2_port
 export CAMLIBS
