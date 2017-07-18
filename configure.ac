@@ -25,7 +25,9 @@ AC_CONFIG_SRCDIR([README.md])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([auto-m4])
 AC_CONFIG_AUX_DIR([auto-aux])
-AM_INIT_AUTOMAKE([-Wall -Werror foreign 1.15 dist-xz check-news filename-length-max=99])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign 1.15
+		  no-dist-gzip dist-xz
+		  check-news filename-length-max=99])
 
 m4_pattern_forbid([^GP_])
 
