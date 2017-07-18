@@ -1,5 +1,11 @@
+SUBDIRS  =
 # @subdirs@ are the configured subproject directories
-SUBDIRS = gphoto-m4 @subdirs@
+SUBDIRS += @subdirs@
+SUBDIRS += .
+
+CLEANFILES =
+TESTS =
+check_SCRIPTS =
 
 EXTRA_DIST = COPYING.LIB
 
@@ -16,7 +22,12 @@ IOLIBS = $(PWD)/src/libgphoto2/libgphoto2_port
 export CAMLIBS
 export IOLIBS
 
-include $(top_srcdir)/tools/Makefile-files
+# Avoid rebuilding of gphoto-m4/Makefile.in as gphoto-m4 now supports
+# single Makefile.am builds with Makefile includes.
+include gphoto-m4/Makefile-files
+include tools/Makefile-files
+include tests/Makefile-files
+
 
 #######################################################################
 # Help for the maintainer

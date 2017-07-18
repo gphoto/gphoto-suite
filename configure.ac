@@ -147,10 +147,7 @@ fi
 dnl ---------------------------------------------------------------------------
 dnl Output files
 dnl ---------------------------------------------------------------------------
-AC_CONFIG_FILES([
-  Makefile
-  gphoto-m4/Makefile
-])
+AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
 
 GP_CONFIG_OUTPUT
