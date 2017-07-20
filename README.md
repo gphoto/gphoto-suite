@@ -27,6 +27,37 @@ This part is still to be written for the new `git` based setup which
 replaces the old `svn` based one.
 
 
+Getting the source code via git
+-------------------------------
+
+Sources:
+
+    git@github.com:gphoto/gphoto-suite.git
+    https://github.com/gphoto/gphoto-suite.git
+
+Get the sources:
+
+    git clone --recursive git@github.com:gphoto/gphoto-suite.git
+
+If you forgot the `--recursive` argument to `git clone`:
+
+    git clone git@github.com:gphoto/gphoto-suite.git
+    git submodule update --init --recursive
+
+For `git amb`, clone and install `ndim-git-utils` from the following
+place, and then use `git amb`:
+
+    git clone https://github.com/ndim/ndim-git-utils.git
+
+    cd gphoto-suite
+    git amb make distcheck
+	ls -l _build/master/*.tar.*
+
+If you have to make changes to gphoto-m4, src/gphoto2, src/libgphoto2
+and push those upstream, change to the respective directory and make
+sure that you actually have a git HEAD (not a detached head).
+
+
 Make sure required (or optional) dependencies are installed:
 ------------------------------------------------------------
 
