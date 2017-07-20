@@ -10,3 +10,7 @@
 	path = gphoto-m4
 	url = ../gphoto-m4.git
 	branch = master
+[submodule "gphoto2-manual"]
+	path = src/gphoto2-manual
+	url = ../gphoto2-manual.git
+	branch = master
