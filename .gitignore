@@ -1,0 +1,10 @@
+/auto-aux/
+/auto-m4/
+/autom4te.cache/
+
+/aclocal.m4
+/configure
+/INSTALL
+/config.h.in
+
+Makefile.in

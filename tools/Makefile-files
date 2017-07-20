@@ -1,3 +1,7 @@
-EXTRA_DIST += tools/README.tools
-EXTRA_DIST += tools/check-includes
-EXTRA_DIST += tools/tarball-pathlengths.py
+# -*- Makefile -*-
+
+EXTRA_DIST += %reldir%/README.tools
+EXTRA_DIST += %reldir%/check-includes
+EXTRA_DIST += %reldir%/git-status
+EXTRA_DIST += %reldir%/revert-po-files
+EXTRA_DIST += %reldir%/tarball-pathlengths.py

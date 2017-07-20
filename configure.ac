@@ -21,11 +21,15 @@ dnl However, "/src/libgphoto2/libgphoto2_port/gphoto2/gphoto2-port-portability.h
 dnl is 66 characters, which leaves 33 characters for the distdir name. 
 dnl "gphoto-suite-2.3.0" whould be 18 characters - bingo!
 AC_INIT([gphoto suite],[2.5.0],[gphoto-devel@lists.sourceforge.net],[gphoto-suite])
-AC_CONFIG_SRCDIR([README.gphoto-suite])
+AC_CONFIG_SRCDIR([README.md])
 AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIR([auto-m4])
 AC_CONFIG_AUX_DIR([auto-aux])
-AM_INIT_AUTOMAKE([-Wall -Werror gnu 1.9 dist-bzip2 check-news filename-length-max=99])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign 1.15
+		  no-dist-gzip dist-xz
+		  check-news filename-length-max=99])
 
+m4_pattern_forbid([^GP_])
 
 GP_CHECK_SHELL_ENVIRONMENT
 GP_CONFIG_MSG([Build])
@@ -65,7 +69,7 @@ AC_SUBST([AM_LDFLAGS])
 
 
 # Configure subdirs.
-   
+
 dnl Absolute directories work with multiple levels of
 dnl AC_CONFIG_SUBDIRS recursion, relative directories do not.
 gp_top_builddir="$(pwd)/"
@@ -145,11 +149,7 @@ fi
 dnl ---------------------------------------------------------------------------
 dnl Output files
 dnl ---------------------------------------------------------------------------
-AC_CONFIG_FILES([
-  Makefile
-  m4m/Makefile
-])
+AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
 
 GP_CONFIG_OUTPUT
-

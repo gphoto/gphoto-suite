@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# Revert all *.po files to whatever is in the gphoto-suite git repo's
+# current HEAD, and in all git submodules respective HEADs.
+#
+# This is quite useful as "make dist" and "make distcheck" update the
+# *.po files all the time.
+
+cd "$(dirname "$0")/.."
+
+git checkout HEAD -- $(git ls-files "*.po")
+git submodule foreach --recursive 'git checkout HEAD -- $(git ls-files "*.po")'

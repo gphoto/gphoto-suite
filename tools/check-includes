@@ -1,4 +1,10 @@
 #!/bin/sh
+#
+# Find all occurences of #include <PATH_TO_FILE.h> where PATH_TO_FILE
+# *does* start with "gphoto2", but *not* with "gphoto2/".
+#
+# This was quite useful in the code cleanups of the early 2000s IIRC,
+# but is probably not so useful any more in 2017.
 
 dir="${1-.}"
 
@@ -7,4 +13,5 @@ find "$dir" \
 	-not -name '*~' \
 	-not -name '*.orig' \
 	-not -name '*.svn-base' \
+	-not -name '.git' \
 	-exec grep -H '^#include ["<]gphoto2[^/].*[">]' {} \;
