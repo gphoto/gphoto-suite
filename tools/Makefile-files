@@ -1,3 +1,5 @@
+# -*- Makefile -*-
+
 EXTRA_DIST += %reldir%/README.tools
 EXTRA_DIST += %reldir%/check-includes
 EXTRA_DIST += %reldir%/git-status
