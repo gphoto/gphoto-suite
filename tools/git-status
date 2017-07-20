@@ -1,6 +1,13 @@
 #!/bin/sh
 #
+# Usage: git-status
+#
 # Run 'git status' in the local repo and recurse into all submodules.
+
+set -e
+
+echo "Entering '.'"
+cd "$(dirname "$0")"
 
 git status
 git submodule foreach --recursive 'git status'
