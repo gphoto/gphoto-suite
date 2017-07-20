@@ -8,9 +8,9 @@ TESTS         += %reldir%/test010-gphoto-m4-sync
 check_SCRIPTS += %reldir%/test010-gphoto-m4-sync
 %reldir%/test010-gphoto-m4-sync: Makefile
 	mkdir -p %reldir%
-	echo "#!/bin/sh" > %reldir%/test-gphoto-m4-sync
-	echo "set -e" >> %reldir%/test-gphoto-m4-sync
-	echo "cd $(abs_top_srcdir)" >> %reldir%/test-gphoto-m4-sync
-	echo "if test -e 'gphoto-m4/.git'; then :; else exit 77; fi" >> %reldir%/test-gphoto-m4-sync
-	echo "gphoto-m4/gphoto-m4-sync src" >> %reldir%/test-gphoto-m4-sync
-	chmod +x %reldir%/test-gphoto-m4-sync
+	echo "#!/bin/sh" > %reldir%/test010-gphoto-m4-sync
+	echo "set -e" >> %reldir%/test010-gphoto-m4-sync
+	echo "cd $(abs_top_srcdir)" >> %reldir%/test010-gphoto-m4-sync
+	echo "if test -e 'gphoto-m4/.git'; then :; else exit 77; fi" >> %reldir%/test010-gphoto-m4-sync
+	echo "gphoto-m4/gphoto-m4-sync src" >> %reldir%/test010-gphoto-m4-sync
+	chmod +x %reldir%/test010-gphoto-m4-sync
