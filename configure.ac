@@ -76,7 +76,7 @@ gp_top_builddir="$(pwd)/"
 gp_top_srcdir="$(cd "${srcdir}" && pwd)/"
 
 GP_SUBPACKAGE([gphoto2_manual])
-if "$enable_subpackage_gphoto2_manual" && test -d "${srcdir}/src/gphoto2-manual"; then
+if "$enable_subpackage_gphoto2_manual" && test -f "${srcdir}/src/gphoto2-manual/configure.ac"; then
    AC_CONFIG_SUBDIRS([src/gphoto2-manual])
    # let pkg-config find *-uninstalled.pc
    PKG_CONFIG_PATH="${gp_top_builddir}src/gphoto2-manual${PKG_CONFIG_PATH+:}${PKG_CONFIG_PATH}"
@@ -84,7 +84,7 @@ if "$enable_subpackage_gphoto2_manual" && test -d "${srcdir}/src/gphoto2-manual"
 fi
 
 GP_SUBPACKAGE([libexif])
-if "$enable_subpackage_libexif" && test -d "${srcdir}/src/libexif"; then
+if "$enable_subpackage_libexif" && test -f "${srcdir}/src/libexif/configure.ac"; then
    AC_CONFIG_SUBDIRS([src/libexif])
    # let pkg-config find *-uninstalled.pc
    PKG_CONFIG_PATH="${gp_top_builddir}src/libexif${PKG_CONFIG_PATH+:}${PKG_CONFIG_PATH}"
@@ -92,12 +92,12 @@ if "$enable_subpackage_libexif" && test -d "${srcdir}/src/libexif"; then
 fi
 
 GP_SUBPACKAGE([exif])
-if "$enable_subpackage_exif" && test -d "${srcdir}/src/exif"; then
+if "$enable_subpackage_exif" && test -f "${srcdir}/src/exif/configure.ac"; then
    AC_CONFIG_SUBDIRS([src/exif])
 fi
 
 GP_SUBPACKAGE([libexif_gtk])
-if "$enable_subpackage_libexif_gtk" && test -d "${srcdir}/src/libexif-gtk"; then
+if "$enable_subpackage_libexif_gtk" && test -f "${srcdir}/src/libexif-gtk/configure.ac"; then
    AC_CONFIG_SUBDIRS([src/libexif-gtk])
    # let pkg-config find *-uninstalled.pc
    PKG_CONFIG_PATH="${gp_top_builddir}src/libexif-gtk${PKG_CONFIG_PATH+:}${PKG_CONFIG_PATH}"
@@ -105,12 +105,12 @@ if "$enable_subpackage_libexif_gtk" && test -d "${srcdir}/src/libexif-gtk"; then
 fi
 
 GP_SUBPACKAGE([gexif])
-if "$enable_subpackage_gexif" && test -d "${srcdir}/src/gexif"; then
+if "$enable_subpackage_gexif" && test -f "${srcdir}/src/gexif/configure.ac"; then
    AC_CONFIG_SUBDIRS([src/gexif])
 fi
 
 GP_SUBPACKAGE([libgphoto2])
-if "$enable_subpackage_libgphoto2" && test -d "${srcdir}/src/libgphoto2"; then
+if "$enable_subpackage_libgphoto2" && test -f "${srcdir}/src/libgphoto2/configure.ac"; then
    AC_CONFIG_SUBDIRS([src/libgphoto2])
    # let pkg-config find *-uninstalled.pc
    PKG_CONFIG_PATH="${gp_top_builddir}src/libgphoto2/libgphoto2_port${PKG_CONFIG_PATH+:}${PKG_CONFIG_PATH}"
@@ -121,27 +121,27 @@ if "$enable_subpackage_libgphoto2" && test -d "${srcdir}/src/libgphoto2"; then
 fi
 
 GP_SUBPACKAGE([gphoto2])
-if "$enable_subpackage_gphoto2" && test -d "${srcdir}/src/gphoto2"; then
+if "$enable_subpackage_gphoto2" && test -f "${srcdir}/src/gphoto2/configure.ac"; then
    AC_CONFIG_SUBDIRS([src/gphoto2])
 fi
 
 GP_SUBPACKAGE([gphotofs])
-if "$enable_subpackage_gphotofs" && test -d "${srcdir}/src/gphotofs"; then
+if "$enable_subpackage_gphotofs" && test -f "${srcdir}/src/gphotofs/configure.ac"; then
    AC_CONFIG_SUBDIRS([src/gphotofs])
 fi
 
 GP_SUBPACKAGE([libgphoto2_sharp])
-if "$enable_subpackage_libgphoto2_sharp" && test -d "${srcdir}/src/libgphoto2-sharp"; then
+if "$enable_subpackage_libgphoto2_sharp" && test -f "${srcdir}/src/libgphoto2-sharp/configure.ac"; then
    AC_CONFIG_SUBDIRS([src/libgphoto2-sharp])
 fi
 
 GP_SUBPACKAGE([libgphoto2_python])
-if "$enable_subpackage_libgphoto2_python" && test -d "${srcdir}/src/libgphoto2-python"; then
+if "$enable_subpackage_libgphoto2_python" && test -f "${srcdir}/src/libgphoto2-python/configure.ac"; then
    AC_CONFIG_SUBDIRS([src/libgphoto2-python])
 fi
 
 GP_SUBPACKAGE([gtkam])
-if "$enable_subpackage_gtkam" && test -d "${srcdir}/src/gtkam"; then
+if "$enable_subpackage_gtkam" && test -f "${srcdir}/src/gtkam/configure.ac"; then
    AC_CONFIG_SUBDIRS([src/gtkam])
 fi
 
