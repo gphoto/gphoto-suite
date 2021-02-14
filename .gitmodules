@@ -14,3 +14,15 @@
 	path = src/gphoto2-manual
 	url = ../gphoto2-manual.git
 	branch = master
+[submodule "src/gtkam"]
+	path = src/gtkam
+	url = ../gtkam.git
+	branch = master
+[submodule "src/libexif"]
+	path = src/libexif
+	url = ../libexif.git
+	branch = master
+[submodule "src/libexif-gtk"]
+	path = src/libexif-gtk
+	url = ../libexif-gtk.git
+	branch = master
