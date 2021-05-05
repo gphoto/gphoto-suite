@@ -53,9 +53,10 @@ place, and then use `git amb`:
     git amb make distcheck
 	ls -l _build/master/*.tar.*
 
-If you have to make changes to gphoto-m4, src/gphoto2, src/libgphoto2
-and push those upstream, change to the respective directory and make
-sure that you actually have a git HEAD (not a detached head).
+If you have to make changes to src/gphoto-m4, src/gphoto2,
+src/libgphoto2 and push those upstream, change to the respective
+directory and make sure that you actually have a git HEAD (not a
+detached head).
 
 
 Make sure required (or optional) dependencies are installed:

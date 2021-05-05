@@ -11,7 +11,7 @@ EXTRA_DIST = COPYING.LIB
 
 EXTRA_DIST += README.md
 
-ACLOCAL_AMFLAGS = -I auto-m4 -I gphoto-m4
+ACLOCAL_AMFLAGS = -I auto-m4 -I src/gphoto-m4
 
 # The gphoto2 testsuite (in src/gphoto2/tests/testsuite) requires
 # CAMLIBS and IOLIBS to be set properly. Otherwise, the "make check"
@@ -25,9 +25,9 @@ IOLIBS = $(PWD)/src/libgphoto2/libgphoto2_port
 export CAMLIBS
 export IOLIBS
 
-# Avoid rebuilding of gphoto-m4/Makefile.in as gphoto-m4 now supports
+# Avoid rebuilding of src/gphoto-m4/Makefile.in as gphoto-m4 supports
 # single Makefile.am builds with Makefile includes.
-include gphoto-m4/Makefile-files
+include src/gphoto-m4/Makefile-files
 include tools/Makefile-files
 include tests/Makefile-files
 

@@ -22,3 +22,7 @@
 	path = src/libexif-gtk
 	url = https://github.com/libexif/libexif-gtk.git
 	branch = master
+[submodule "src/gphoto-m4"]
+	path = src/gphoto-m4
+	url = ../gphoto-m4.git
+	branch = master
