@@ -1,4 +1,4 @@
-AC_PREREQ(2.59)
+AC_PREREQ(2.69)
 dnl Use a short version and package name here, or "make dist" will fail
 dnl packaging [...]/libgphoto2_port/gphoto2-port-portability.h
 dnl because tar only handles 99 chars per file path. Oh, and GNU tar 1.13
