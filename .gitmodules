@@ -20,9 +20,9 @@
 	branch = master
 [submodule "src/libexif"]
 	path = src/libexif
-	url = ../libexif.git
+	url = https://github.com/libexif/libexif.git
 	branch = master
 [submodule "src/libexif-gtk"]
 	path = src/libexif-gtk
-	url = ../libexif-gtk.git
+	url = https://github.com/libexif/libexif-gtk.git
 	branch = master
