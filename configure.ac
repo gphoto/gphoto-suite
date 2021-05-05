@@ -46,16 +46,20 @@ GP_CONFIG_MSG([Source code location],[${srcdir}])
 dnl ---------------------------------------------------------------------------
 dnl compiler stuff
 dnl ---------------------------------------------------------------------------
+
+LT_INIT([
+  dlopen
+  win32-dll
+  disable-static
+])
+
 AC_PROG_CC
-AC_C_CONST
-dnl Of course, Sun Solaris has not caught up with 10..20 year old POSIX standards.
-dnl So for compatibility's sake, we restrict ourselves to classic tar with
-dnl the 99 character limit and hope our path names are shorter.
-dnl _AM_PROG_TAR([pax])dnl 'pax' aka 'posix'
-AM_PROG_LIBTOOL
+AC_PROG_CXX
+
 AM_CFLAGS="$CFLAGS"
 AM_LDFLAGS="$LDFLAGS"
 AM_CPPFLAGS="$CPPFLAGS"
+
 GP_CONFIG_MSG([Compiler],[${CC}])
 
 
