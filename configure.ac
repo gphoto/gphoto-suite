@@ -14,11 +14,11 @@ dnl   src/gphoto2/...
 dnl That would change the standard module people check out to "gphoto-suite".
 dnl
 dnl "/src/libgphoto2/libgphoto2_port/libgphoto2_port/gphoto2/gphoto2-port-portability.h"
-dnl is 82 characters, which leaves 17 characters for the distdir name. 
+dnl is 82 characters, which leaves 17 characters for the distdir name.
 dnl "gphoto-suite-2.3.0" whould be 18 characters - one too many: 82+18=100 > 99 :-(
 dnl
 dnl However, "/src/libgphoto2/libgphoto2_port/gphoto2/gphoto2-port-portability.h"
-dnl is 66 characters, which leaves 33 characters for the distdir name. 
+dnl is 66 characters, which leaves 33 characters for the distdir name.
 dnl "gphoto-suite-2.3.0" whould be 18 characters - bingo!
 AC_INIT([gphoto suite],[2.5.0],[gphoto-devel@lists.sourceforge.net],[gphoto-suite])
 AC_CONFIG_SRCDIR([README.md])
