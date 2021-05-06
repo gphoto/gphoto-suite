@@ -26,3 +26,11 @@
 	path = src/gphoto-m4
 	url = ../gphoto-m4.git
 	branch = master
+[submodule "src/exif"]
+	path = src/exif
+	url = https://github.com/libexif/exif.git
+	branch = master
+[submodule "src/gexif"]
+	path = src/gexif
+	url = https://github.com/libexif/gexif.git
+	branch = master
