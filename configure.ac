@@ -109,24 +109,6 @@ AS_IF(["$enable_subpackage_libexif" && test -f "${srcdir}/src/libexif/configure.
    export PKG_CONFIG_PATH
 ])
 
-GP_SUBPACKAGE([exif])
-AS_IF(["$enable_subpackage_exif" && test -f "${srcdir}/src/exif/configure.ac"], [dnl
-   AC_CONFIG_SUBDIRS([src/exif])
-])
-
-GP_SUBPACKAGE([libexif_gtk])
-AS_IF(["$enable_subpackage_libexif_gtk" && test -f "${srcdir}/src/libexif-gtk/configure.ac"], [dnl
-   AC_CONFIG_SUBDIRS([src/libexif-gtk])
-   # let pkg-config find *-uninstalled.pc
-   PKG_CONFIG_PATH="${gp_top_builddir}src/libexif-gtk${PKG_CONFIG_PATH+:}${PKG_CONFIG_PATH}"
-   export PKG_CONFIG_PATH
-])
-
-GP_SUBPACKAGE([gexif])
-AS_IF(["$enable_subpackage_gexif" && test -f "${srcdir}/src/gexif/configure.ac"], [dnl
-   AC_CONFIG_SUBDIRS([src/gexif])
-])
-
 GP_SUBPACKAGE([libgphoto2])
 AS_IF(["$enable_subpackage_libgphoto2" && test -f "${srcdir}/src/libgphoto2/configure.ac"], [dnl
    AC_CONFIG_SUBDIRS([src/libgphoto2])
@@ -157,6 +139,24 @@ dnl GP_SUBPACKAGE([libgphoto2_python])
 dnl AS_IF(["$enable_subpackage_libgphoto2_python" && test -f "${srcdir}/src/libgphoto2-python/configure.ac"], [dnl
 dnl    AC_CONFIG_SUBDIRS([src/libgphoto2-python])
 dnl ])
+
+GP_SUBPACKAGE([exif])
+AS_IF(["$enable_subpackage_exif" && test -f "${srcdir}/src/exif/configure.ac"], [dnl
+   AC_CONFIG_SUBDIRS([src/exif])
+])
+
+GP_SUBPACKAGE([libexif_gtk])
+AS_IF(["$enable_subpackage_libexif_gtk" && test -f "${srcdir}/src/libexif-gtk/configure.ac"], [dnl
+   AC_CONFIG_SUBDIRS([src/libexif-gtk])
+   # let pkg-config find *-uninstalled.pc
+   PKG_CONFIG_PATH="${gp_top_builddir}src/libexif-gtk${PKG_CONFIG_PATH+:}${PKG_CONFIG_PATH}"
+   export PKG_CONFIG_PATH
+])
+
+GP_SUBPACKAGE([gexif])
+AS_IF(["$enable_subpackage_gexif" && test -f "${srcdir}/src/gexif/configure.ac"], [dnl
+   AC_CONFIG_SUBDIRS([src/gexif])
+])
 
 GP_SUBPACKAGE([gtkam])
 AS_IF(["$enable_subpackage_gtkam" && test -f "${srcdir}/src/gtkam/configure.ac"], [dnl
