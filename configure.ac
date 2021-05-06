@@ -164,6 +164,17 @@ AS_IF(["$enable_subpackage_gtkam" && test -f "${srcdir}/src/gtkam/configure.ac"]
 ])
 
 
+GP_CONFIG_MSG([PKG_CONFIG_PATH])
+saved_IFS="$IFS"
+IFS=":"
+for path in ${PKG_CONFIG_PATH}
+do
+	IFS="$saved_IFS"
+	GP_CONFIG_MSG([path],[${path}])
+done
+IFS="$saved_IFS"
+
+
 dnl ---------------------------------------------------------------------------
 dnl Output files
 dnl ---------------------------------------------------------------------------
