@@ -143,20 +143,20 @@ AS_IF(["$enable_subpackage_gphoto2" && test -f "${srcdir}/src/gphoto2/configure.
    AC_CONFIG_SUBDIRS([src/gphoto2])
 ])
 
-GP_SUBPACKAGE([gphotofs])
-AS_IF(["$enable_subpackage_gphotofs" && test -f "${srcdir}/src/gphotofs/configure.ac"], [dnl
-   AC_CONFIG_SUBDIRS([src/gphotofs])
-])
+dnl GP_SUBPACKAGE([gphotofs])
+dnl AS_IF(["$enable_subpackage_gphotofs" && test -f "${srcdir}/src/gphotofs/configure.ac"], [dnl
+dnl    AC_CONFIG_SUBDIRS([src/gphotofs])
+dnl ])
 
-GP_SUBPACKAGE([libgphoto2_sharp])
-AS_IF(["$enable_subpackage_libgphoto2_sharp" && test -f "${srcdir}/src/libgphoto2-sharp/configure.ac"], [dnl
-   AC_CONFIG_SUBDIRS([src/libgphoto2-sharp])
-])
+dnl GP_SUBPACKAGE([libgphoto2_sharp])
+dnl AS_IF(["$enable_subpackage_libgphoto2_sharp" && test -f "${srcdir}/src/libgphoto2-sharp/configure.ac"], [dnl
+dnl    AC_CONFIG_SUBDIRS([src/libgphoto2-sharp])
+dnl ])
 
-GP_SUBPACKAGE([libgphoto2_python])
-AS_IF(["$enable_subpackage_libgphoto2_python" && test -f "${srcdir}/src/libgphoto2-python/configure.ac"], [dnl
-   AC_CONFIG_SUBDIRS([src/libgphoto2-python])
-])
+dnl GP_SUBPACKAGE([libgphoto2_python])
+dnl AS_IF(["$enable_subpackage_libgphoto2_python" && test -f "${srcdir}/src/libgphoto2-python/configure.ac"], [dnl
+dnl    AC_CONFIG_SUBDIRS([src/libgphoto2-python])
+dnl ])
 
 GP_SUBPACKAGE([gtkam])
 AS_IF(["$enable_subpackage_gtkam" && test -f "${srcdir}/src/gtkam/configure.ac"], [dnl
