@@ -70,6 +70,9 @@ GP_CONFIG_MSG([Compiler],[${CC}])
 GP_CONFIG_MSG([Features])
 
 
+PKG_CHECK_MODULES([PKGMODULECHECK], [pkgmodulecheck], [:], [:])
+
+
 
 # ---------------------------------------------------------------------------
 # Warnings: If we have GCC, be paranoid.
